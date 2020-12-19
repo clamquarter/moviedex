@@ -48,9 +48,9 @@ app.use(function errorHandler(error, req, res, next) {
           movie.country.toLowerCase().includes(req.query.country.toLowerCase()))
        }
 
-       if (req.query.vote) {
+       if (req.query.avg_vote) {
         response = response.filter(movie => 
-          movie.avg_vote >= req.query.vote)
+          movie.avg_vote >= req.query.avg_vote)
 
        }
       res.send(response)
